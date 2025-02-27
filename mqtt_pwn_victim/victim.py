@@ -49,7 +49,7 @@ class Utils:
 class VictimClient(object):
     """The Victim Client Class"""
 
-    def __init__(self, client_id=None, host="m2m.eclipse.org", port=1883, timeout=60, username=None, password=None):
+    def __init__(self, client_id=None, host="localhost", port=1883, timeout=60, username=None, password=None):
         """The class initializer"""
 
         self._mqtt_client = mqtt.Client(client_id)
@@ -65,7 +65,7 @@ class VictimClient(object):
         self.os = Utils.determine_os()
         self.hostname = Utils.determine_hostname()
 
-        self._base_topic = '$SYS/test123'
+        self._base_topic = 'pwn/test123'
         self._output_topic = f"{self._base_topic}/output/{self.uuid}"
         self._register_topic = f"{self._base_topic}/register/{self.uuid}"
 
@@ -145,8 +145,6 @@ if __name__ == '__main__':
 
     VictimClient(
         host='localhost',
-        port=1884,
-        username='admin',
-        password='admin'
+        port=1883,
     ).run()
 

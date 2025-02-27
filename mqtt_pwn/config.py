@@ -19,13 +19,13 @@ DEFAULT_USERNAME_LIST = BASE_PATH + 'resources/wordlists/usernames.txt'
 DEFAULT_PASSWORD_LIST = BASE_PATH + 'resources/wordlists/passwords.txt'
 
 # Connection Related
-DEFAULT_BROKER_HOST = 'test.mosquitto.org'
+DEFAULT_BROKER_HOST = 'test.moquitto.org'
 DEFAULT_BROKER_PORT = 1883
 DEFAULT_BROKER_USERNAME = None
 DEFAULT_BROKER_PASSWORD = None
 
 # C2 Related
-C2_BASE_TOPIC = '$SYS/test123'
+C2_BASE_TOPIC = 'pwn/test123'
 
 # Other
 DEFINITIONS_PATH = BASE_PATH + 'resources/definitions.json'
